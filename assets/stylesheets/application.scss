@@ -4,20 +4,41 @@
 }
 
 .card {
+  position: relative;
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  display: flex;
-  flex-direction: column;
+  margin: 10px;
+  &:hover {
+    transition: transform .2s ease-in-out;
+    transform: scale(1.01);
+  }
+}
+
+.card-text {
+  margin-left: 20px;
 }
 
 .card img {
   height: 100%;
   width: 120px;
   object-fit: cover;
+}
+
+.card img#garage {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h3 {
+  position: absolute;
+  color: white;
+  font-size: 26px;
+  top: 20%;
+  left: 10%;
 }
 
 .card h2 {
@@ -57,4 +78,20 @@ a {
     text-decoration: none;
     color: black;
   }
+}
+
+.car-form {
+  padding: 25px;
+  border: 1px solid gray;
+  margin: 20% 0px;
+  background-color: lightblue;
+}
+
+.delete-button {
+  color: white;
+  background-color: red;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 5px;
 }
